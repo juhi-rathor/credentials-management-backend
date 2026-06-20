@@ -11,6 +11,11 @@ const seedAdmin = async () => {
 
   if (existing) {
     console.log('✅ Admin already exists');
+    if (existing.email !== ENV_CONFIG.email) {
+      existing.email = ENV_CONFIG.email;
+      await existing.save();
+      console.log(`🔄 Admin email updated to: ${ENV_CONFIG.email}`);
+    }
     return;
   }
 
