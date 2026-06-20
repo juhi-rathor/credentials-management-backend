@@ -17,7 +17,8 @@ app.use(compression());
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
-  "http://localhost:3001"
+  "http://localhost:3001",
+  "https://credentials-management-frontend-fd3v-mujt4ockj.vercel.app"
 ];
 
 if (process.env.FRONTEND_URL) {
