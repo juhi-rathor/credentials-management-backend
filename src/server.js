@@ -1,4 +1,6 @@
 require('dotenv').config();
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
 
 const app = require('./app');
 const { connectDB, disconnectDB } = require('./config/db.config');
